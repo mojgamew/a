@@ -161,11 +161,22 @@ ul li:hover{
         <li>✦ Yalnız xüsusi dəvətnamə ilə giriş</li>
     </ul>
 
-    <a href="https://t.me/+yqsoAYWYqrM0Y2Yy" target="_blank" class="telegram-btn">
+    <a href="https://t.me/+yqsoAYWYqrM0Y2Yy" target="_blank" class="telegram-btn" id="telegramBtn">
         Telegram vasitəsilə dəvətnamə alın
     </a>
 
 </div>
+
+<script>
+// Отправка события Lead при клике на кнопку
+document.getElementById('telegramBtn').addEventListener('click', function() {
+    fbq('track', 'Lead', {
+        value: 0,
+        currency: 'AZN',
+        content_name: 'Poker Club Invitation'
+    });
+});
+</script>
 
 </body>
 </html>
